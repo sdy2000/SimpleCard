@@ -1,0 +1,173 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$color_1: #fff6fe;
+$color_2: #b990b6;
+$color_3: #6d516a;
+
+
+
+@mixin subTitle {
+    font-size: 11px;
+    margin: 5px;
+    color: $color_2;
+}
+
+
+// ------------------ Card
+
+@mixin header_card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin avatar_card {
+    .avatar {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-bottom: 2px solid $color_2;
+        }
+
+        .imgfooter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .lable {
+                @include subTitle();
+            }
+
+            .product_size {
+                display: flex;
+                align-items: center;
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid $color_2;
+                    color: $color_2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 3px;
+                    cursor: pointer;
+                }
+
+                span:hover {
+                    border: 2px solid $color_3;
+                    color: $color_3;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin Body_card {
+    .body {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+
+        .title {
+            margin-bottom: 20px;
+
+            .sub_title {
+                @include subTitle();
+                width: 85%;
+                margin-bottom: -10px;
+            }
+
+            .main_title {
+                width: 85%;
+                font-size: larger;
+            }
+
+            .price {
+                color: $color_2;
+                font-size: xx-large;
+            }
+        }
+
+        .des {
+            line-height: 18px;
+            margin-bottom: 25px;
+        }
+
+
+        .button {
+            position: relative;
+
+            .add_to_cart {
+                border: none;
+                color: white;
+                background-color: $color_2;
+                padding: 10px 26px;
+                font-size: 17px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_3;
+                }
+            }
+
+
+            .add_to {
+                border: none;
+                color: white;
+                background-color: $color_2;
+                padding: 9px 22px;
+                font-size: 17px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_3;
+                }
+            }
+
+
+        }
+
+    }
+}
+
+
+.bg_card {
+    background-color: $color_2;
+    width: 750px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.card {
+    padding: 20px 15px;
+    border-radius: 15px;
+    background-color: $color_1;
+    box-shadow: 1px 1px 5px black;
+
+    .header_card {
+        @include header_card;
+    }
+
+    .main {
+        display: flex;
+        @include avatar_card;
+        @include Body_card;
+    }
+}

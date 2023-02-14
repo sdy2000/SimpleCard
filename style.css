@@ -1,0 +1,123 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg_card {
+  background-color: #b990b6;
+  width: 750px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card {
+  padding: 20px 15px;
+  border-radius: 15px;
+  background-color: #fff6fe;
+  box-shadow: 1px 1px 5px black;
+}
+.card .header_card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card .main {
+  display: flex;
+}
+.card .main .avatar {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .main .avatar img {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #b990b6;
+}
+.card .main .avatar .imgfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .main .avatar .imgfooter .lable {
+  font-size: 11px;
+  margin: 5px;
+  color: #b990b6;
+}
+.card .main .avatar .imgfooter .product_size {
+  display: flex;
+  align-items: center;
+}
+.card .main .avatar .imgfooter .product_size span {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #b990b6;
+  color: #b990b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+  cursor: pointer;
+}
+.card .main .avatar .imgfooter .product_size span:hover {
+  border: 2px solid #6d516a;
+  color: #6d516a;
+}
+.card .main .body {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.card .main .body .title {
+  margin-bottom: 20px;
+}
+.card .main .body .title .sub_title {
+  font-size: 11px;
+  margin: 5px;
+  color: #b990b6;
+  width: 85%;
+  margin-bottom: -10px;
+}
+.card .main .body .title .main_title {
+  width: 85%;
+  font-size: larger;
+}
+.card .main .body .title .price {
+  color: #b990b6;
+  font-size: xx-large;
+}
+.card .main .body .des {
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+.card .main .body .button {
+  position: relative;
+}
+.card .main .body .button .add_to_cart {
+  border: none;
+  color: white;
+  background-color: #b990b6;
+  padding: 10px 26px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.card .main .body .button .add_to_cart:hover {
+  background-color: #6d516a;
+}
+.card .main .body .button .add_to {
+  border: none;
+  color: white;
+  background-color: #b990b6;
+  padding: 9px 22px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.card .main .body .button .add_to:hover {
+  background-color: #6d516a;
+}/*# sourceMappingURL=style.css.map */
